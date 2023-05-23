@@ -7,6 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./charac-by-id.component.css']
 })
 export class CharacByIdComponent implements OnInit{
+  detlChar(id: any): any {
+    throw new Error('Method not implemented.');
+  }
   id: number =0;
   character: any = null;
 

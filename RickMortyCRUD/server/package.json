@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "json-server --watch db.json"
+  },
+  "keywords": [
+    "json",
+    "server",
+    "api",
+    "rest",
+    "apirest"
+  ],
+  "author": "Alejandro Jimenez",
+  "license": "MIT"
+}

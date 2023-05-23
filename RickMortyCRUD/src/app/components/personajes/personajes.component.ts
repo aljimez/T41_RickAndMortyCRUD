@@ -1,27 +1,36 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { CharacByIdComponent } from '../charac-by-id/charac-by-id.component';
-
+import { Component, OnInit } from '@angular/core';
+import { Character } from 'src/app/models/personajes';
+import { ListCharacterService } from 'src/app/service/list-character.service';
 @Component({
   selector: 'app-personajes',
   templateUrl: './personajes.component.html',
   styleUrls: ['./personajes.component.css']
 })
-export class PersonajesComponent {
+export class PersonajesComponent implements OnInit{
 
-  characters: any = null;
   personajes: any = null;
+  characters: Character = new Character;
+  character: Character[] = [];
 
-  constructor(private http:HttpClient, private CharById:CharacByIdComponent ) {}
+  constructor( private characte:ListCharacterService) {}
 //Get data while program starts
   ngOnInit():void {
-
-    this.http.get("https://rickandmortyapi.com/api/character").subscribe(results =>{this.characters = results; console.log(results)});
+    this.getCharacters();
   }
 
-  redMre(id:any){
-    this.characters = this.CharById.detlChar(id); console.log(id);
-  }
+   getCharacters() {
+      this.characte.createCharacter(this.characters).subscribe(
+        results =>{this.characters = results; console.log(results)
+
+        },
+        (error: any): void => {
+          console.log(error);
+        }
+      );
+    }
+
+
+
+
 
 }

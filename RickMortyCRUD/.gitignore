@@ -19,7 +19,8 @@ yarn-error.log
 *.launch
 .settings/
 *.sublime-workspace
-
+C:\xampp\htdocs\T41_RickAndMortyCRUD\RickMortyCRUD\server\node_modules\*
+C:\xampp\htdocs\T41_RickAndMortyCRUD\RickMortyCRUD\node_modules\*
 # Visual Studio Code
 .vscode/*
 !.vscode/settings.json
