@@ -1,4 +1,4 @@
-export class Character {
+export class Personajes {
     id: string;
     name: string;
     status: string;

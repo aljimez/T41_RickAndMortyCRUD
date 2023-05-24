@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, throwError } from 'rxjs';
-import { Character } from '../models/personajes';
+import { Personajes } from '../models/personajes';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +24,7 @@ export class ListCharacterService {
       .pipe(catchError(this.handleError));
   }
 
-  createCharacter(data: Character): Observable<any> {
+  createCharacter(data: Personajes): Observable<any> {
     return this.http
       .post(this.API_URL, data)
       .pipe(catchError(this.handleError));

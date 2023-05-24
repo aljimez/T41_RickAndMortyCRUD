@@ -1,7 +1,7 @@
 import { Component,OnInit } from '@angular/core';
-import { ListCharacterService } from '../service/list-character.service';
+import { ListCharacterService } from '../../service/list-character.service';
 import { Router } from '@angular/router';
-import { Character } from '../models/personajes';
+import { Personajes } from '../../models/personajes';
 
 @Component({
   selector: 'app-create-charac',
@@ -9,9 +9,11 @@ import { Character } from '../models/personajes';
   styleUrls: ['./create-charac.component.css']
 })
 export class CreateCharacComponent implements OnInit{
-  characters: Character = new Character;
+
+  characters: Personajes = new Personajes();
+
   ngOnInit(): void {
-    this.saveCharacters();
+
   }
 
 constructor(private CharList: ListCharacterService,private router:Router){}

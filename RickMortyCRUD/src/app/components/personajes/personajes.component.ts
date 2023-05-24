@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Character } from 'src/app/models/personajes';
+import { Personajes } from 'src/app/models/personajes';
 import { ListCharacterService } from 'src/app/service/list-character.service';
 @Component({
   selector: 'app-personajes',
@@ -9,8 +9,8 @@ import { ListCharacterService } from 'src/app/service/list-character.service';
 export class PersonajesComponent implements OnInit{
 
   personajes: any = null;
-  characters: Character = new Character;
-  character: Character[] = [];
+  characters: Personajes = new Personajes;
+  character: Personajes[] = [];
 
   constructor( private characte:ListCharacterService) {}
 //Get data while program starts
