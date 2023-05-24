@@ -9,6 +9,7 @@ import { CharacByIdComponent } from './components/charac-by-id/charac-by-id.comp
 import { HomeComponent } from './pages/home/home.component';
 import { CreateCharacComponent } from './components/create-charac/create-charac.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,10 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserModule,
+    HttpClientModule
+
   ],
   providers: [
     ],

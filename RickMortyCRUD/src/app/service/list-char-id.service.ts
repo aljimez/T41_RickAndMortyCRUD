@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ListCharIdService implements OnInit{
+export class ListCharIdService {
 
   id:number =0;
   constructor(private http:HttpClient) { }

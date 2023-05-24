@@ -17,7 +17,6 @@ export class PersonajesComponent implements OnInit{
   ngOnInit():void {
     this.getCharacters();
   }
-
    getCharacters() {
       this.characte.createCharacter(this.characters).subscribe(
         results =>{this.characters = results; console.log(results)
@@ -28,6 +27,23 @@ export class PersonajesComponent implements OnInit{
         }
       );
     }
+    updateCharacter(){
+      this.characte.updateCharacter(this.characte,this.id).subscribe(result => {this.characte = result;
+      })
+    }
+  id(characte: ListCharacterService, id: any) {
+    throw new Error('Method not implemented.');
+  }
+
+    deleteCharacter(char_code:string){
+      this.characte.deleteCharacter(char_code).subscribe(
+        results => {this.ngOnInit();
+
+        }
+      )
+    }
+
+
 
 
 
