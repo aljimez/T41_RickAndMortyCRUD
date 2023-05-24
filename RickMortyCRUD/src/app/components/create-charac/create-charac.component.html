@@ -6,7 +6,7 @@
     <input
       type="text"
       class="form-control"
-      [ngModel]="characters.name"
+      [ngModel]="characters.name" id="name"
       required
     />
   </div>
@@ -15,7 +15,7 @@
     <input
       type="text"
       class="form-control"
-      [ngModel]="characters.gender"
+      [ngModel]="characters.gender" id="gender"
       required
     />
   </div>
@@ -24,7 +24,7 @@
     <input
       type="text"
       class="form-control"
-      [ngModel]="characters.species"
+      [ngModel]="characters.species" id="species"
       required
     />
   </div>
@@ -32,7 +32,7 @@
     <label for="origin">Origin</label>
     <input
       type="text"
-      class="form-control"
+      class="form-control" id="origin"
       [ngModel]="characters.origin"
       required
     />

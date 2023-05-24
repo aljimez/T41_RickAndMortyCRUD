@@ -18,7 +18,7 @@ import { CreateCharacComponent } from './components/create-charac/create-charac.
     PersonajesComponent,
     CharacByIdComponent,
     HomeComponent,
-    CreateCharacComponent
+    CreateCharacComponent,
 
   ],
   imports: [

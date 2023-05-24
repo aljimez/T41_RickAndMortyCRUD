@@ -18,6 +18,7 @@ export class CreateCharacComponent implements OnInit{
 
 constructor(private CharList: ListCharacterService, private router:Router){}
 
+
 saveCharacters(){
 this.CharList.createCharacter(this.characters).subscribe(response =>{
 console.log(response);
