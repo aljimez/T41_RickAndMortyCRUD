@@ -15,12 +15,12 @@ export class PersonajesComponent implements OnInit{
   constructor( private characte:ListCharacterService) {}
 //Get data while program starts
   ngOnInit():void {
-    this.getCharacters();
+
   }
    getCharacters() {
       this.characte.createCharacter(this.characters).subscribe(
-        results =>{this.characters = results; console.log(results)
 
+        results =>{this.characters = results; console.log(results);
         },
         (error: any): void => {
           console.log(error);
@@ -31,6 +31,7 @@ export class PersonajesComponent implements OnInit{
       this.characte.updateCharacter(this.characte,this.id).subscribe(result => {this.characte = result;
       })
     }
+
   id(characte: ListCharacterService, id: any) {
     throw new Error('Method not implemented.');
   }

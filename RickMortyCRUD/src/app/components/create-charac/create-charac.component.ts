@@ -16,11 +16,12 @@ export class CreateCharacComponent implements OnInit{
 
   }
 
-constructor(private CharList: ListCharacterService,private router:Router){}
+constructor(private CharList: ListCharacterService, private router:Router){}
 
 saveCharacters(){
-this.CharList.createCharacter(this.characters).subscribe(response =>{this.router.navigate(['/personajes']);
+this.CharList.createCharacter(this.characters).subscribe(response =>{
 console.log(response);
+this.router.navigate(['/personajes']);
 })
 }
 }
