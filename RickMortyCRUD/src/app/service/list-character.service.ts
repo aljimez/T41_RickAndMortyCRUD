@@ -25,7 +25,7 @@ export class ListCharacterService {
   }
 
   createCharacter(data: Personajes): Observable<any> {
-    console.log(data);
+    console.log(data,"Hola");
     return this.http
       .post(this.API_URL, data)
       .pipe(catchError(this.handleError));

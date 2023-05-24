@@ -18,7 +18,6 @@ characterlist : Personajes[] =[];
   ngOnInit():void {
 
   }
-
   saveCharacter() {
     this.characte.createCharacter(this.characters).subscribe(
       (characte: Personajes[]): void => {
