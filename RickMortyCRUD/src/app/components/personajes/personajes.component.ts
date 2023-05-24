@@ -11,11 +11,24 @@ export class PersonajesComponent implements OnInit{
   personajes: any = null;
   characters: Personajes = new Personajes;
   character: Personajes[] = [];
+characterlist : Personajes[] =[];
 
   constructor( private characte:ListCharacterService) {}
 //Get data while program starts
   ngOnInit():void {
 
+  }
+
+  saveCharacter() {
+    this.characte.createCharacter(this.characters).subscribe(
+      (characte: Personajes[]): void => {
+        this.characterlist = characte;
+        console.log(this.characters);
+      },
+      (error: any): void => {
+        console.log(error);
+      }
+    );
   }
    getCharacters() {
       this.characte.createCharacter(this.characters).subscribe(
