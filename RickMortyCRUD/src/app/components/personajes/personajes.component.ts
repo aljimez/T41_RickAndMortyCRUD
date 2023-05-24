@@ -16,7 +16,7 @@ characterlist : Personajes[] =[];
   constructor( private characte:ListCharacterService) {}
 //Get data while program starts
   ngOnInit():void {
-
+this.getCharacters();
   }
   saveCharacter() {
     this.characte.createCharacter(this.characters).subscribe(

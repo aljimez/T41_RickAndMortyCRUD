@@ -4,11 +4,20 @@
     <img src={{p.image}} alt="imagen de personaje" />
     <div class="card-body">
       <h5 class="card-title">{{ p.name }}</h5>
+      <h5 class="card-title">{{ p.status }}</h5>
+      <h5 class="card-title">{{ p.species }}</h5>
+      <h5 class="card-title">{{ p.gender }}</h5>
       <button
         class="btn btn-info justify-content-center"
       >
         Ir
       </button>
     </div>
+
+
+					<button class="btn btn-primary" type="button" (click)="deleteCharacter(p.id)">Borrar</button>
+
+          <button type="submit" class="btn btn-primary" (click)="updateCharacter()">Actualizar</button>
+
+    </div>
   </div>
-</div>
