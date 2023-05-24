@@ -16,8 +16,42 @@
       </button>
     </div>
 
+    <button class="btn btn-primary" type="button" (click)="deleteCharacter(p.id)">Borrar</button>
 
-					<button class="btn btn-primary" type="button" (click)="deleteCharacter(p.id)">Borrar</button>
+    <div class="mb-3 mt-3">
+      <label for="name" class="form-label">Location:</label>
+      <input type="text" class="form-control" id="name"
+        name="charlocation" [(ngModel)]="p.name">
+    </div>
+
+    <div class="mb-3 mt-3">
+      <label for="status" class="form-label">Location:</label>
+      <input type="text" class="form-control" id="status"
+        name="charlocation" [(ngModel)]="p.status">
+    </div>
+
+    <div class="mb-3 mt-3">
+      <label for="species"class="form-label">Location:</label>
+      <input type="text" class="form-control" id="species"
+        name="charlocation" [(ngModel)]="p.species">
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="gender"class="form-label">Gender:</label>
+      <input type="text" class="form-control" id="gender"
+        name="charlocation" [(ngModel)]="p.gender">
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="origin" class="form-label">Origin:</label>
+      <input type="text" class="form-control" id="origin"
+        name="charlocation" [(ngModel)]="p.origin">
+    </div>
+
+    <div class="mb-3 mt-3">
+      <label for="location" class="form-label">Location:</label>
+      <input type="text" class="form-control" id="location"
+        name="charlocation" [(ngModel)]="p.location">
+    </div>
+
 
           <button type="submit" class="btn btn-primary" (click)="updateCharacter()">Actualizar</button>
 
